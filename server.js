@@ -3,6 +3,6 @@ var express = require("express"),
 	http = require("http"),
 	server = http.createServer(app),
 	io = require("socket.io").listen(server);
-	port = 8081;
+	port = 8000;
 server.listen(port);
 console.log('Server running');

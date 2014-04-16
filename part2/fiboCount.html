@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Part 1</title>
+
+    <!-- Bootstrap -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+
+    <script src="fibo.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="starter-template">
+        <h1>Part 2</h1>
+        <p class="lead" id="content">
+
+          <table class='table table-bordered table-striped table-condensed table-nonfluid' align="center" >
+            <thead>
+              <tr>
+                <th width="10%">n</th>
+                <th width="18%">伺服器計算時間 (ms)</th>
+                <th width="18%">用戶端計算時間 (ms)</th>
+              </tr>
+            </thead>
+          <tbody id="tbody">
+          </tbody>
+        </p>
+      </div>
+    </div>
+    
+    <script>
+      var tbody = document.getElementById('tbody');
+
+
+      for(m=10;m<=20;m++){
+        var n = parseInt(m/2);
+        tbody.innerHTML +="<tr><td>"+ m +"</td><td>"+fibo(m)+"</td><td>"+0+"</td>"
+      }
+
+    function fibo(n){
+      if(n==0)
+        return 0;
+      else if(n==1)
+        return 1;
+      else
+       return fibo(n-1)+fibo(n-2);
+    }
+    </script>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    
+  </body>
+</html>
